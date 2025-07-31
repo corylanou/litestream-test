@@ -1,0 +1,35 @@
+# Binaries
+litestream
+mc
+
+# Hidden directories (but not .github and .markdownlint.json)
+.*
+!.github/
+!.markdownlint.json
+
+# SQLite database files and their associated files
+*.db
+*.db-shm
+*.db-wal
+
+# Backup and replica directories
+replicas/
+restored-*.db*
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
