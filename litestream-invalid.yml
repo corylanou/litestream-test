@@ -1,0 +1,12 @@
+# Invalid configuration: both replica and replicas specified
+access-key-id: minioadmin
+secret-access-key: minioadmin
+
+dbs:
+  - path: /tmp/litestream-test/test.db
+    replica:
+      url: s3://litestream-test/test-db
+      endpoint: http://localhost:9000
+    replicas:  # This should cause an error
+      - url: s3://litestream-test/test-db-old
+        endpoint: http://localhost:9000

@@ -1,0 +1,14 @@
+# Test configuration with NO levels specified to test Ben's default compaction levels
+# Expected defaults: L1:5min, L2:1hr, L9(snapshot):24hr
+
+access-key-id: minioadmin
+secret-access-key: minioadmin
+
+# NO levels configuration - should use defaults
+# NO snapshot configuration - should use defaults
+
+dbs:
+  - path: /tmp/litestream-test/test3.db
+    replica:
+      type: file
+      path: /tmp/litestream-test/replicas/test3-defaults

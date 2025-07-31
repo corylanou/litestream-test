@@ -1,0 +1,12 @@
+# Test configuration using old replicas format (should still work but deprecated)
+access-key-id: minioadmin
+secret-access-key: minioadmin
+
+dbs:
+  # Test with old replicas format (DEPRECATED but should work)
+  - path: /tmp/litestream-test/test.db
+    replicas:  # Using deprecated replicas array format
+      - url: s3://litestream-test/test-db-old
+        endpoint: http://localhost:9000
+        force-path-style: true
+        skip-verify: true

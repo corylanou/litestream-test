@@ -1,0 +1,14 @@
+# Configuration for file-based replication testing
+levels:
+  - interval: 10s     # Very short interval for testing
+  - interval: 30s
+
+snapshot:
+  interval: 1m
+  retention: 10m
+
+dbs:
+  - path: /tmp/litestream-test/test2.db
+    replica:
+      type: file
+      path: /tmp/litestream-test/replicas/test2-replica

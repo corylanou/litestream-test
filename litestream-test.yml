@@ -1,0 +1,32 @@
+# Test configuration for Litestream LTX testing
+# Using local MinIO for S3-compatible storage
+
+# Global S3 settings (adjust these for your MinIO setup)
+access-key-id: minioadmin
+secret-access-key: minioadmin
+
+# Multi-level compaction configuration
+levels:
+  - interval: 1m      # Level 1: compact every minute for testing
+  - interval: 5m      # Level 2: compact every 5 minutes
+
+# Snapshot configuration
+snapshot:
+  interval: 10m       # Take snapshots every 10 minutes
+  retention: 1h       # Keep snapshots for 1 hour
+
+# Database configurations
+dbs:
+  # Test with single replica format (NEW)
+  - path: /tmp/litestream-test/test.db
+    replica:
+      url: s3://litestream-test/test-db
+      endpoint: http://localhost:9000  # MinIO default endpoint
+      force-path-style: true
+      skip-verify: true
+
+  # Test database for file-based replication
+  - path: /tmp/litestream-test/test2.db  
+    replica:
+      type: file
+      path: /tmp/litestream-test/replicas/test2-replica
