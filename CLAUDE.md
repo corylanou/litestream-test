@@ -33,8 +33,11 @@ Key files:
 
 ### Common Commands
 
-- Build: `go build ./cmd/litestream`
+- Build: `go build -o ./bin/litestream ./cmd/litestream`
+- Run the binary: `./bin/litestream [commands]`
 - Test markdown: `markdownlint '**/*.md' --config .markdownlint.json`
+
+Note: The binary is built to the `./bin` directory to prevent accidental commits. The `./bin` directory should be in `.gitignore`.
 
 ## Code Style
 
@@ -48,3 +51,11 @@ Key files:
 - ALWAYS sign commits using `-S` flag
 - Example: `git commit -S -m "Your commit message"`
 - This ensures commit authenticity and security
+
+## Repository Management
+
+- Always create PRs for the litestream-source to the original repo (benjohnson) not the fork
+
+## Go Development Best Practices
+
+- Always run go fmt ./... whenever you finish making go changes to ensure you have properly formatted code
