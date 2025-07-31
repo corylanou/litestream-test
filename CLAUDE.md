@@ -7,7 +7,13 @@
 After creating or editing ANY markdown file (.md), ALWAYS run:
 
 ```bash
-markdownlint <filename>.md
+markdownlint '**/*.md' --config .markdownlint.json
+```
+
+Or for a specific file:
+
+```bash
+markdownlint <filename>.md --config .markdownlint.json
 ```
 
 If there are any linting errors, fix them immediately.
@@ -28,7 +34,7 @@ Key files:
 ### Common Commands
 
 - Build: `go build ./cmd/litestream`
-- Test markdown: `markdownlint *.md`
+- Test markdown: `markdownlint '**/*.md' --config .markdownlint.json`
 
 ## Code Style
 
