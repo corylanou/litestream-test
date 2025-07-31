@@ -2,6 +2,8 @@
 
 This repository contains comprehensive test configurations and scripts for testing [Litestream](https://litestream.io/), a streaming replication tool for SQLite databases.
 
+**Litestream Source Repository**: [https://github.com/benbjohnson/litestream](https://github.com/benbjohnson/litestream)
+
 ## Purpose
 
 This repository serves as a testing ground for:
@@ -21,6 +23,9 @@ This repository serves as a testing ground for:
 ├── create-test-db.sql       # SQL script to create test database
 ├── TEST-PLAN.md            # Detailed test plan documentation
 ├── LITESTREAM_LTX_TESTING_REPORT.md  # Test results and findings
+├── TODO.md                 # Current task list based on Ben Johnson's feedback
+├── CLAUDE.md               # Project guidelines for Claude
+├── docs/images/            # Screenshots and images for documentation
 └── litestream-source       # Source configuration file
 
 ```
@@ -123,6 +128,7 @@ For S3 replication, configure:
 - See TEST-PLAN.md for detailed testing procedures
 
 - See LITESTREAM_LTX_TESTING_REPORT.md for test results
+- See TODO.md for current development tasks and issues to address
 
 ## Contributing
 
