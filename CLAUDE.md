@@ -36,3 +36,9 @@ Key files:
 - Always ensure proper spacing around headings
 - End files with a single newline
 - Use proper URL formatting in markdown (avoid bare URLs)
+
+## Git Commit Requirements
+
+- ALWAYS sign commits using `-S` flag
+- Example: `git commit -S -m "Your commit message"`
+- This ensures commit authenticity and security
